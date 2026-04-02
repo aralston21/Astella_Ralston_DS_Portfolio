@@ -81,7 +81,7 @@
     "href": "Cleansing_Exploration/project1.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "text": "Paste in a template\n\n\nShow the code\nlibrary(tidyverse)\n\ndadsoon &lt;- read.csv(\"dad_acurite_weather2.CSV\", stringsAsFactors = T)\ncal &lt;- read.csv(\"DadCalendarMonsoon.csv\", stringsAsFactors = T)\n\nglimpse(dadsoon)\n\n\nRows: 309,233\nColumns: 14\n$ Timestamp           &lt;fct&gt; 1/1/2019 10:00:00 AM, 1/1/2019 10:12:00 AM, 1/1/20…\n$ Outdoor.Temperature &lt;dbl&gt; 19, 19, 21, 21, 17, 17, 17, 17, 17, 17, 16, 16, 16…\n$ Outdoor.Humidity    &lt;dbl&gt; 66, 66, 64, 62, 87, 88, 88, 88, 88, 87, 88, 89, 89…\n$ Dew.Point           &lt;dbl&gt; 10, 10, 11, 10, 14, 14, 14, 14, 14, 14, 13, 13, 13…\n$ Heat.Index          &lt;dbl&gt; 19, 19, 21, 21, 17, 17, 17, 17, 17, 17, 16, 16, 16…\n$ Wind.Chill          &lt;dbl&gt; 12, 19, 17, 14, 14, 17, 11, 9, 11, 8, 10, 10, 13, …\n$ Barometric.Pressure &lt;dbl&gt; 29.76622, 29.76622, 29.79575, 29.79575, 29.55951, …\n$ Rain                &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…\n$ Wind.Speed          &lt;dbl&gt; 4.000077, 4.000077, 4.000077, 5.009805, 2.019456, …\n$ Wind.Average        &lt;dbl&gt; 5.0098050, 1.1650710, 3.4175420, 5.0098050, 1.7087…\n$ Peak.Wind           &lt;dbl&gt; 9.009882, 9.009882, 8.000154, 8.000154, 6.990426, …\n$ Wind.Direction      &lt;dbl&gt; 22.5, 315.0, 67.5, 112.5, 112.5, 22.5, 292.5, 360.…\n$ Indoor.Temperature  &lt;dbl&gt; 63, 63, 63, 63, 65, 65, 64, 64, 64, 64, 64, 64, 64…\n$ Indoor.Humidity     &lt;dbl&gt; 26, 26, 26, 26, 29, 29, 28, 27, 27, 27, 26, 26, 26…\n\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Data Exploration",
       "Project 1"

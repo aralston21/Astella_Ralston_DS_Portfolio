@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
 }
+
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+}
+pre.numberSource { margin-left: 3em; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -4071,7 +4106,7 @@ vertical-align: -.125em;
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-right">
-      <h1 class="title">Client Report - [Insert Project Title]</h1>
+      <div class="quarto-title-block"><div><h1 class="title">Client Report - [Insert Project Title]</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> See code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
             <p class="subtitle lead">Course DS 250</p>
                       </div>
   </div>
@@ -4147,6 +4182,35 @@ vertical-align: -.125em;
 </nav>
 <section id="paste-in-a-template" class="level3">
 <h3 class="anchored" data-anchor-id="paste-in-a-template">Paste in a template</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>dadsoon <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;dad_acurite_weather2.CSV&quot;</span>, <span class="at">stringsAsFactors =</span> T)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>cal <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;DadCalendarMonsoon.csv&quot;</span>, <span class="at">stringsAsFactors =</span> T)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(dadsoon)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 309,233
+Columns: 14
+$ Timestamp           &lt;fct&gt; 1/1/2019 10:00:00 AM, 1/1/2019 10:12:00 AM, 1/1/20…
+$ Outdoor.Temperature &lt;dbl&gt; 19, 19, 21, 21, 17, 17, 17, 17, 17, 17, 16, 16, 16…
+$ Outdoor.Humidity    &lt;dbl&gt; 66, 66, 64, 62, 87, 88, 88, 88, 88, 87, 88, 89, 89…
+$ Dew.Point           &lt;dbl&gt; 10, 10, 11, 10, 14, 14, 14, 14, 14, 14, 13, 13, 13…
+$ Heat.Index          &lt;dbl&gt; 19, 19, 21, 21, 17, 17, 17, 17, 17, 17, 16, 16, 16…
+$ Wind.Chill          &lt;dbl&gt; 12, 19, 17, 14, 14, 17, 11, 9, 11, 8, 10, 10, 13, …
+$ Barometric.Pressure &lt;dbl&gt; 29.76622, 29.76622, 29.79575, 29.79575, 29.55951, …
+$ Rain                &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ Wind.Speed          &lt;dbl&gt; 4.000077, 4.000077, 4.000077, 5.009805, 2.019456, …
+$ Wind.Average        &lt;dbl&gt; 5.0098050, 1.1650710, 3.4175420, 5.0098050, 1.7087…
+$ Peak.Wind           &lt;dbl&gt; 9.009882, 9.009882, 8.000154, 8.000154, 6.990426, …
+$ Wind.Direction      &lt;dbl&gt; 22.5, 315.0, 67.5, 112.5, 112.5, 22.5, 292.5, 360.…
+$ Indoor.Temperature  &lt;dbl&gt; 63, 63, 63, 63, 65, 65, 64, 64, 64, 64, 64, 64, 64…
+$ Indoor.Humidity     &lt;dbl&gt; 26, 26, 26, 26, 29, 29, 28, 27, 27, 27, 26, 26, 26…</code></pre>
+</div>
+</div>
 
 
 </section>

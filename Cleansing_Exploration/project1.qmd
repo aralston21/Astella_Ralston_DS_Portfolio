@@ -26,3 +26,13 @@ execute:
 ---
 
 ### Paste in a template
+
+```{r}
+library(tidyverse)
+
+dadsoon <- read.csv("dad_acurite_weather2.CSV", stringsAsFactors = T)
+cal <- read.csv("DadCalendarMonsoon.csv", stringsAsFactors = T)
+
+glimpse(dadsoon)
+```
+
